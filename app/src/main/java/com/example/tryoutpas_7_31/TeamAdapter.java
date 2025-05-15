@@ -9,13 +9,21 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
-    private List<Team> teamList;
+    private final ArrayList<Team> listClub;
+    private final OnItemClickListener listener;
 
-    public TeamAdapter (List<Team> teamList) {
-        this.teamList = teamList;
+    public interface OnItemClickListener {
+        void onItemClick(Team clubModel);
+    }
+
+    public TeamAdapter(ArrayList<Team> listClub, OnItemClickListener listener) {
+        this.listClub = listClub;
+        this.listener = listener;
     }
 
     @NonNull
@@ -28,27 +36,32 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Team team = teamList.get(position);
-        holder.teamName.setText(team.getStrTeam());
+        Team club = listClub.get(position);
+        holder.tvNamaClub.setText(club.getNamaClub());
+        holder.tvStadion.setText(club.getStadion());
 
         Glide.with(holder.itemView.getContext())
-                .load(team.getStrTeamBadge())
-                .into(holder.teamLogo);
+                .load(club.getImageUrl())
+                .into(holder.ivClub);
+
+        holder.itemView.setOnClickListener(v -> listener.onItemClick(club));
     }
 
     @Override
     public int getItemCount() {
-        return teamList.size();
+        return listClub.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView teamName;
-        ImageView teamLogo;
+        TextView tvNamaClub;
+        TextView tvStadion;
+        ImageView ivClub;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            teamName = itemView.findViewById(R.id.teamName);
-            teamLogo = itemView.findViewById(R.id.teamLogo);
+            tvNamaClub = itemView.findViewById(R.id.tvNamaClub);
+            tvStadion = itemView.findViewById(R.id.tvDeskripsiClub);
+            ivClub = itemView.findViewById(R.id.ivClub);
         }
     }
 }
