@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:gravity="center"
-    android:orientation="vertical">
+    android:padding="24dp"
+    android:background="#F5F5F5">
 
-    <TextView
-        android:text="Dashboard Fragment"
-        android:textSize="24sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnPremiereLeague"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Premier League"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#3D195B"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:elevation="4dp"/>
+
+    <Button
+        android:id="@+id/btnSpainLeague"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="La Liga (Spain)"
+        android:backgroundTint="#FF4B44"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:elevation="4dp"/>
+
+    <FrameLayout
+        android:id="@+id/childFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"/>
+
+
 </LinearLayout>
