@@ -1,22 +1,21 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="12dp"
-    card_view:cardElevation="6dp"
-    card_view:cardCornerRadius="16dp"
-    android:background="?attr/selectableItemBackground">
-
+    card_view:cardElevation="8dp"
+    card_view:cardCornerRadius="18dp"
+    android:foreground="?attr/selectableItemBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
-        android:gravity="center_vertical">
-
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_gradient_card">
 
         <ImageView
             android:id="@+id/ivClub"
@@ -24,7 +23,8 @@
             android:layout_height="72dp"
             android:scaleType="centerCrop"
             android:layout_marginEnd="16dp"
-            android:padding="4dp"/>
+            android:background="@drawable/logo_border"
+            android:padding="6dp" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -32,25 +32,23 @@
             android:orientation="vertical"
             android:layout_weight="1">
 
-
-
             <TextView
                 android:id="@+id/tvNamaClub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Club"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
-                android:textColor="#222222"/>
+                android:textColor="#0F0E0E" />
 
             <TextView
-                android:id="@+id/tvDeskripsiClub"
+                android:id="@+id/tvStadion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Stadion"
                 android:textSize="14sp"
-                android:textColor="#666666"
-                android:layout_marginTop="4dp"/>
+                android:textColor="#0F0E0E"
+                android:layout_marginTop="4dp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

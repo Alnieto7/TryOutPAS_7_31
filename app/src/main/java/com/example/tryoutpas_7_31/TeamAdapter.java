@@ -60,7 +60,7 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
         public ViewHolder(View itemView) {
             super(itemView);
             tvNamaClub = itemView.findViewById(R.id.tvNamaClub);
-            tvStadion = itemView.findViewById(R.id.tvDeskripsiClub);
+            tvStadion = itemView.findViewById(R.id. tvStadion );
             ivClub = itemView.findViewById(R.id.ivClub);
         }
     }
