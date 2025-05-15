@@ -13,21 +13,23 @@
         android:id="@+id/btnPremiereLeague"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Premier League"
+        android:text="English Premier League"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#3D195B"
+        android:backgroundTint="#682C9B"
+        android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="20dp"
         android:elevation="4dp"/>
 
     <Button
         android:id="@+id/btnSpainLeague"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="La Liga (Spain)"
-        android:backgroundTint="#FF4B44"
+        android:text="La Liga Santander"
+        android:backgroundTint="#FF0900"
+        android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="20dp"
         android:elevation="4dp"/>
 
     <FrameLayout
